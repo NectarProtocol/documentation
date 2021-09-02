@@ -1,5 +1,6 @@
 # Nectar Protocol
 
+
 ## Introduction
 
 
@@ -21,11 +22,11 @@ In 2019, a surgeon in China successfully completed a liver removal of a lab anim
 
   
 
-In 2020, because of the COVID-19 Pandemic, clinicians in the United States were allowed to practice telemedicine [across state borders](https://www.hhs.gov/coronavirus/telehealth/index.html) without concern to their State Licensure. In 2021, the Center for Care Innovations presented a host of evidence that, for many clinical applications, telemedicine was [just as if not more effective](https://www.careinnovations.org/virtualcare/resources/evidence-for-telemedicine-efficacy-and-quality/) than in-person care.
+In 2020, because of the COVID-19 Pandemic, clinicians in the United States were allowed to practice telemedicine [across state borders](https://www.hhs.gov/coronavirus/telehealth/index.html) without concern to their State Licensure. In 2021, the Center for Care Innovations presented a host of evidence that, for many clinical applications, telemedicine was [*just as, if not more effective*,](https://www.careinnovations.org/virtualcare/resources/evidence-for-telemedicine-efficacy-and-quality/) than in-person care.
 
   
 
-In 2021, the opportunity of in silico trials (trials performed by computer simulation) promises [better, faster, and cheaper clinical trials](https://trialsjournal.biomedcentral.com/articles/10.1186/s13063-020-05002-w).
+In 2021, the opportunity of *in silico* trials (trials performed by computer simulation) promises [better, faster, and cheaper clinical trials](https://trialsjournal.biomedcentral.com/articles/10.1186/s13063-020-05002-w).
 
   
 
@@ -41,7 +42,7 @@ But, healthcare has strict data and security protocols and regulations - specifi
 
   
 
-The key to Web3 for healthcare is personalized medicine which is made possible by personalized, identifiable data.
+The key to Web3 for healthcare is *personalized medicine* which is made possible by *personalized, identifiable data*.
 
   
 
@@ -59,15 +60,15 @@ Additionally, innovation occurs at the enterprise level.
 
 -   The Living Heart Project was initiated by Dassault Systèmes, a company founded in 1981 with €4.5B annual revenues;
     
--   The personalized knee replacements were conducted at a health system;
+-   The personalized knee replacements were conducted at a teaching hospital;
     
 -   The HoloLens shoulder replacement was conducted at a 1,097 bed hospital in France (to compare, Massachusetts General, one of the leading hospitals in the United States, has 1,059 beds - these are large teaching institutions)
     
 -   The remote surgery in China was conducted by a surgeon from Beijing's 301 Hospital which has 4,000 beds
     
--   While telehealth was started by startups, the leading telehealth company is valued north of $15B
+-   While telehealth was started by startups, the leading telehealth company is now valued north of $15B (and they've been HIPAA compliant since they began)
     
--   And, in silico trials are led by researchers which are either in teaching and university institutions or, if a startup, came from teaching and university institutions
+-   And, *in silico* trials are led by researchers which are either in teaching and university institutions or, if a startup, came from teaching and university institutions
     
 
 Enterprises do not skimp on data and security practices.
