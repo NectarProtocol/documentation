@@ -80,3 +80,7 @@ We’ve also learned, from Web1 through Web2, that public networks (Internet vs.
   
 
 The future of healthcare requires a foundation that fosters innovation in an open, accessible, data rich, regulatory compliant way, while remaining flexible enough to accommodate data and security policies that inevitably modernize.
+
+
+The future of healthcare is built on Nectar.
+
