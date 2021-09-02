@@ -1,1 +1,1 @@
-# whitepaper
+# documentation
