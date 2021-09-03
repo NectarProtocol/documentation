@@ -140,8 +140,10 @@ However, blockchains, in their current form, have flaws that prevent its leading
     
 
   
+  
 
 These don’t work for healthcare, and especially as a foundation for driving innovation in healthcare because:  
+  
   
 
 1.  82 million transactions occur daily in healthcare globally
