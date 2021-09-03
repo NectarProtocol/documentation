@@ -113,3 +113,101 @@ By creating a highly-scalable yet private and low-cost blockchain environment, e
 HIPAA compliant DSPs also create the distributed data storage infrastructure of Nectar. Private data analytics is a promising, efficient Web3 technology and can have a significant impact on cost savings for enterprises. While individuals and small businesses are likely to adopt distributed data storage before enterprise, the potential for better security, lower cost, and new revenue streams for enterprises will be more enticing than simply shifting an on-prem server to a cloud-based provider.
 
 Nectar’s unique combination of roll up technology, focus on privacy preservation, and HIPAA compliance creates the needed foundation for the Web3 future of healthcare. 
+
+# Nectar Rollup Deep Dive
+
+  
+
+The Nectar Protocol is based on Arbitrum’s Open Source Code with certain modifications to ensure healthcare compliance. This document assumes that you will access [their exceptional documentation](https://developer.offchainlabs.com/docs/inside_arbitrum#fees) for Arbitrum-specific detailed technical specifications.
+
+## Why Rollups
+
+  
+
+The purpose of Nectar is to enable the future of healthcare through novel technologies and incentive alignment. Web3, specifically with a blockchain foundation, is this future.
+
+  
+
+However, blockchains, in their current form, have flaws that prevent its leading role in the future of healthcare:
+
+  
+
+1.  Limitation in transaction throughput
+    
+2.  Expensive transaction costs
+    
+3.  Public transactions for complex computations
+    
+
+  
+
+These don’t work for healthcare, and especially as a foundation for driving innovation in healthcare because:  
+  
+
+1.  82 million transactions occur daily in healthcare globally
+    
+2.  Spending on healthcare (3.9%) is [growing faster](https://www.who.int/health_financing/documents/health-expenditure-report-2019.pdf?ua=1) than the global economy (3.0%)
+    
+3.  Identifiable healthcare data has strict privacy regulations, and generally, data privacy laws are becoming more strict
+    
+
+  
+
+When considering options that work for healthcare’s Web3 blockchain infrastructure, Layer 2 technology ticks all the boxes:
+
+  
+
+Layer 2 works for healthcare because it enables a compliant infrastructure that has abundant and accessible open source code, transactions are faster and cheaper than Layer 1, and certain implementations can offer total privacy with the benefit of being secured by a Layer 1 chain.
+
+  
+
+There are many Layer 2 options to choose from: State Channels, Plasma, Side Chains, and Rollups. But only the last 2 make sense for healthcare.
+
+  
+
+State Channels and Plasma are both restricted in their application, so they are not suitable for healthcare’s complexities, such as multi-party smart contract execution. And, Optimism [evolved](https://twitter.com/optimismPBC/status/1215410533052055553), leaving its plasma focus behind.
+
+  
+
+Side Chains and Rollups remain.
+
+  
+
+The Tamarin team has experience building Health Nexus, our healthcare-specific blockchain and is currently implementing consensus improvements via their ~$1M grant from the National Science Foundation.The Team’s experience in building a HIPAA-compliant protocol has transformed their understanding of the problems unique to healthcare. While Health Nexus may play a future role in bridging Nectar to other blockchains, the goal of creating a regulatory compliant way of using today’s public blockchains is possible using a Rollup where the data and transactions are handled privately off-chain.  
+  
+
+There are many reasons Rollup technology is ideal for Nectar:  
+  
+
+1.  Rollups increase throughput of any Layer 1
+    
+2.  Rollups cost less since contract execution occurs off-chain
+    
+3.  Rollups enable more use cases and more complexity than State Channels and Plasma
+    
+4.  Rollups offer scalable privacy preservation with and without the need for encapsulating the entire transaction in zero-knowledge technology
+    
+5.  Rollups inherit the security of the L1 consensus protocol
+    
+6.  Rollups remain advantageous after any Layer 1 scaling implementation
+    
+
+  
+
+Some may argue that there are Layer 1 blockchains that already offer unmatched speed and low cost, such as Solana. We considered that, and also considered potential risks of betting on just one blockchain (i.e.: obsoletion).
+
+  
+
+This is another reason why rollups make the most sense: rollups can be blockchain agnostic, and can make any Layer 1 faster and cheaper.
+
+  
+
+### Optimistic vs. Zero-Knowledge? Both!
+
+  
+
+There are two types of rollups, optimistic and zero-knowledge. They differ technologically in their proofing mechanism, interactive vs. validity.
+
+  
+
+Both optimistic and zk-Rollups will eventually be available in Nectar. For now, Nectar is focusing on optimistic rollup implementation because zk-rollups are currently difficult and expensive to implement for complex transactions.
