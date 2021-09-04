@@ -216,6 +216,215 @@ Both optimistic and zk-Rollups will eventually be available in Nectar. For now, 
 
 
 
+## Why an Arbitrum Base
+
+  
+
+We are not interested in re-creating the wheel, so open source code that is ready and developer friendly is important. There are currently two leading optimistic rollup solutions: Optimism and Arbitrum.
+
+We landed on Arbitrum over Optimism because Arbitrum uses multi-round interactive proofs which offer features required for a healthcare-focused technology:  
+  
+
+1.  Limitless contract size and higher per-tx gas limit
+    
+
+1.  In the case of a dispute, large transactions may require many interactive steps to get to the final step. But, because only the final dispute step is posted to L1 contract size and gas limits aren’t a concern. This is important because in healthcare, many processes are complex. It is easy to imagine large, complex contracts that support healthcare.
+    
+
+3.  Implementation flexibility
+    
+
+1.  Healthcare is complex. The option for flexibility is important.
+    
+
+5.  Lowest possible cost to secure on L1
+    
+
+1.  The purpose of interactive proving is to solve the dispute off the L1 chain and post just the resolution on the L1 chain. This is one step, compared to re-execution, which solves the dispute on the L1 chain, and creates the smallest possible L1 transaction, thus reducing a main cost-contributor to rollups.
+    
+
+  
+
+In addition, [native tokens](https://developer.offchainlabs.com/docs/rollup_basics#cross-contract-communication) can be minted on rollup chain. Nectar has a long-term plan of becoming a global network for healthcare and Layer 1 agnostic. Native tokens would enable utility; unique healthcare tools and services that are not restricted by geographical boundaries; and the ability to create a data web and data asset future.
+
+  
+
+Arbitrum has created a dispute resolution protocol that is privacy-preserving, which is the perfect foundation for the private smart contract system needed for healthcare applications. While there are modifications necessary to Arbitrum in order to be more functional for healthcare, Arbitrum has solved key issues with L1 and L2 technology that create a perfect foundation for Nectar.
+
+  
+
+## Arbitrum Optimistic Rollup Architecture
+
+  
+
+Before we dive into the modifications, we’ll cover the key components of Arbitrum’s optimistic rollup architecture. (Reminder that this document assumes that you will access [their exceptional documentation](https://developer.offchainlabs.com/docs/inside_arbitrum#fees) for the minute details of the technology.)
+
+  
+
+![](https://lh4.googleusercontent.com/D24WK9dE_83F7QgR6TwOBCYxDSS0dhS7Coh5RgzYhFg14pCNnm7qzpx50eIc_YBafkbvxEalULntOOacfBLrXvGUhuBfdHNoS-kDZlKVa1UxaLSe9aJLSHD5nz2PSGdlkIrgsSsY=s0)
+
+Source: Arbitrum [Website](https://developer.offchainlabs.com/docs/inside_arbitrum)
+
+  
+
+Arbitrum’s Rollup Architecture includes the following components:
+
+  
+
+-   Arbitrum Chain: the rollup chain and its contents, listed below
+    
+-   ETHbridge: Ethereum-based contracts that are the ultimate authority of what’s going on in the Arbitrum Chain by tracking the inbox, chain state, and outbox.
+    
+-   Rollup Protocol: Composed of the Rollup Contract and Challenge Contract and within the Ethbridge; manages the multi-round interactive proving process of the rollup
+    
+-   AVM Architecture: Provided by Ethbridge; the interface between L1 and L2; L2 runs on the AVM; every Arbitrum Chain has its own AVM
+    
+-   ArbOS: the workhorse of the Arbitrum System; Computation, storage, and management of fee collection occurs in ArbOS
+    
+-   Validators: stakers for the multi-round interactive proving protocol
+    
+-   Full Nodes: the Full Node tracks the state of an Arbitrum Chain and provides an API so that others can interact with the Arbitrum Chain. Full Nodes can have optional roles such as:
+    
+
+1.  Aggregator: receives and batches transactions from users; an unlimited number of aggregators can exist
+    
+2.  Compressor: compresses transactions that are then uncompressed and read by ArbOS; helps save on L1 call data space
+    
+3.  Sequencer
+    
+
+-   Sequencer: an entity that is given authority to order transactions in the inbox of an Arbitrum Chain with the intention to provide finality instantly
+    
+
+  
+
+## Modifications to Arbitrum
+
+To cover modifications, we’ll start at the “top” and move toward the Ethereum chain (opposite to how we introduced Arbitrum’s features where we started with the Ethbridge and moved “out” to Full Nodes).
+
+  
+
+A reminder that a key issue in healthcare is regulation around how protected health information is handled (PHI). PHI has information or details in the data that could be used to identify an individual. For example, the United States has [18 identifiers](https://cphs.berkeley.edu/hipaa/hipaa18.html) which include data points such as name, age, zip code, and even diagnosis or procedure. However, using de-identified data is not possible for the millions of healthcare providers across the globe, and the millions of daily healthcare transactions. The identity in certain data is required for obvious reasons.
+
+  
+
+Additionally, smart contracts can contain potentially anything - including PHI. It may be hard to imagine why PHI would be needed in a smart contract, but it was also hard to imagine AirBnB or Lyft when the internet started.
+
+  
+
+Creating an environment where folks can responsibly use PHI in decentralized technology enables the utmost flexibility in finding ways to fix healthcare. As healthcare (and other industries) become more digitized, regulations are certain to change. But, change will be gradual over time. Regulatory compliant infrastructure has survivability and is best suited to positively influence innovation that will fix healthcare.
+
+  
+
+While the goal of Nectar is to support healthcare globally, Nectar will first start with ensuring HIPAA compliance since HIPAA covers healthcare in the United States and, well, since the US has [lower utilization but higher cost](https://www.commonwealthfund.org/publications/issue-briefs/2020/jan/us-health-care-global-perspective-2019), ranks [dead last](https://www.commonwealthfund.org/publications/fund-reports/2021/aug/mirror-mirror-2021-reflecting-poorly) in access to care, administrative efficiency, equity, and health care outcomes among other high income countries in the world -- there’s a lot of fixing needed. HIPAA also covers healthcare providers, so by focusing on HIPAA first, it ensures that tools built on Nectar can include tools geared towards healthcare providers and facilities. Not including providers and facilities would greatly narrow how Nectar could increase access to and decrease the cost of healthcare. Lastly, HIPAA is a good foundation for broader data privacy policies such as State-based data privacy laws in the United States or high-impact data privacy laws such as GDPR, which is consumer centric and is applicable to other countries that EU residents travel to.
+
+### Data Service Providers = Nodes
+
+  
+
+In Nectar the biggest difference is that Data Service Providers power the Network and provide HIPAA compliance.
+
+  
+
+Data Service Providers (DSPs) can be individuals or businesses and can serve as Full Nodes, Validators and - roles unique to Nectar - as Authorizers, Auditors, Decentralized Data Providers. Full Node and Validator roles are covered here. Decentralized Data Services are covered here.
+
+  
+
+DSP Authorizers and DSP Auditors monitor HIPAA compliance for the Network. In the testnet launch of the Network, DSP Authorizers and DSP Auditors will be approved by Nectar representatives. For the mainnet, Nectar will transition to a decentralized approval process of DSP Authorizers and DSP Auditors, mirroring Proof of Authority models.
+
+  
+
+DSP Authorizers assess HIPAA compliance of DSPs and manage the first step for DSPs to join Nectar. DSPs are identifiable and are assessed for HIPAA compliance which includes written policies, training, and data security practices. Nectar will publish HIPAA requirements publicly so any individual or entity has the opportunity to apply as a DSP.
+
+  
+
+The second and last step for DSPs to join Nectar is via a HIPAA audit by a HIPAA Auditor. The DSP can request DSP Auditor services any time after being approved by a DSP Authorizer. The HIPAA Audit confirms that HIPAA compliance has been implemented appropriately. If the audit is passed, the DSP can join the network. If the audit is not passed, the DSP can choose to implement needed changes or not participate in the network. DSP Auditors conduct audits quarterly as required by HIPAA.
+
+  
+
+A key aspect of HIPAA compliance is executing and maintaining [Business Associate Agreements](https://www.hhs.gov/hipaa/for-professionals/covered-entities/index.html). Business Associate Agreements (BAAs) are mandatory agreements between a Covered Entity and a Business Associate (BA). See the section on Healthcare Data Compliance for more details.
+
+  
+
+Additionally, if a Business Associate (BA) works with a contractor, and that contractor has access to the BA’s PHI, then the contractor and BA must co-sign a Business Associate Subcontractor Agreement. This ensures that both the BA and Subcontractor are aware of and take steps to ensure the security and safety of the PHI.
+
+  
+
+When DSPs join Nectar, they automatically sign Business Associate and Business Associate Subcontractor Agreements. This process is managed by a smart contract.
+
+  
+
+When DSPs are approved, the HIPAA Auditor will categorize the DSP as a: Covered Entity, Business Associate, or Contractor (i.e.: neither a Covered Entity nor Business Associate, which means the DSP can fulfil the Contractor role) which will trigger the correct BAA for execution. However, BAAs, not BASs, will be required for all DSPs in the same chain when there exists one Covered Entity (CE). This is because of the composability within the chain, and the BA role with a CE.
+
+  
+
+While generally BAAs and BASs have standard content, some parts of the agreement are variable, such as the amount of insurance coverage based on the amount of data under management, and some Covered Entities are strict about the contents of their agreements.
+
+#### Incentivizing HIPAA Compliance
+
+  
+
+In order to ensure proper compliance by DSPs, DSP Authorizers, and DSP Auditors, Nectar has certain controls in place. First, a DSP Authorizer and DSP Auditor cannot be the same individual or entity. The individual or entity can serve as a DSP Authorizer or DSP Auditor, but cannot be both at the same time. This is to prevent a DSP Auditor from auditing a DSP that it had just authorized in a DSP Authorizer role. A DSP Authorizer or DSP Auditor can change its role annually.
+
+  
+
+Second, Nectar has built-in incentives via risk sharing to ensure proper compliance by DSPs, DSP Authorizers, and DSP Auditors. HIPAA breaches are required, per federal law, to be reported and can result in a financial penalty to the DSP. To incentivize and support compliance within the Network, the DSP, DSP Authorizer, and DSP Auditor are in a risk-based arrangement. This means that they share in the upside (revenue) and downside (penalty). The percent of risk sharing is dependent on the role. For example, upside and downside risk is higher for the DSP because the DSP manages the data day to day. The percent of risk sharing is higher for the DSP Auditor than the DSP Authorizer because the DSP Auditor interacts more with the DSP via the initial and quarterly audits. In future versions of Nectar, we aim to allow DSPs, DSP Authorizers, and DSP Auditors to adjust their risk sharing percentage allowing more flexibility and creativity. For example, a DSP Auditor could charge lower up-front fees for a higher percent of upside and downside risk sharing. This risk-based arrangement also opens the opportunity for a decentralized insurance model within Nectar.
+
+  
+
+## Technical Modifications
+
+  
+
+Pre-authorized Nodes  
+The validator network consists of HIPAA-compliant DSPs which are contractually obligated to handle data in accordance with security rules as stipulated by federal regulations. These DSPs are legal entities that have executed BAA agreements on chain, allowing us to associate specific blockchain accounts to these legal entities. To facilitate our privacy-preserving compliant network, modifications need to be made that prevent unauthorized nodes fulfilling the role of a DSPs. Network traffic between DSPs and from the Nectar client will only be permitted between approved entities.  
+  
+
+Governance  
+The Nectar network relies on authorized DSPs requiring on-chain governance to maintain the network. Modifications to the Nectar client and on-chain contracts are required to facilitate this governance. See the governance related portions of these documents for more details behind the structure proposed.
+
+  
+
+Privacy-Preserving Smart Contracts
+
+To enable privacy preserving contracts some changes to the way transactions are called, smart contracts are accessed, and data is made available are required.  
+  
+Permissions for Smart Contracts  
+To regulate access to data contained in smart contracts we are adding permissions such that contracts can be made private, with access only permitted for pre-specified accounts. Before a user can access a smart contract they will have to prove they are authorized to do so. This change means that composability between contracts can be restricted as needed. It also means that the global state of Nectar's smart contracts are private, and discreetly revealed as needed, for those authorized to see it.
+
+  
+
+Private Smart Contract Invocation  
+To invoke a smart contract, a signed request is made to access the contract (and any composed contracts). Once authorized, a user is free to interact with the contract. A transaction is created locally, and submitted securely to the DSP network. A transaction receipt along with the hash of the pre and post contract state is sent to the aggregator to include in a batch. On Nectar the aggregator is a public function that can be done by anyone, since an aggregator can always create a batch from a single transaction, Nectar inherits the same censorship resistance as Ethereum.  
+  
+After aggregating and sequencing the transaction is processed by the DSPs, and a result is created for inclusion into the next rollup block.  
+  
+
+Zero Knowledge Proof verification  
+The fraud proof mechanism described in Arbitrums protocol is a multi-round interactive resolution process where only the final dispute step is made public. This step has the potential to share potentially private information, as the step describes a single state change inside an smart contract. Because of the risk of exposing private information, the final resolution step needs to be encoded into a zero knowledge proof to prevent possible leaking.  
+  
+Using Arbitrums dispute resolution to reduce a complex set of state changes down to a singular state change we can express the proof in binary terms such that existing zero knowledge proofs can be efficiently employed. This combined with private transaction invocation enables the preservation of private data inside smart contracts.
+
+  
+
+Extensible Rollup Blocks
+
+In order to provide future networks of DSPs that selectively offer varying decentralized services, Nectars roll-up blocks belong to a unique network that defines the type of services and the state hashes of the resources those services provide. Two networks are planned at the start, a decentralized storage network that secures files in regulatory compliant data stores, and compliant smart-contract services. As future technology emerges new data services will be able to create a unique chain of Nectar blocks for those services.  
+  
+Decentralized Data Storage Service
+
+The previous modifications were aimed at securing smart contracts state and execution. With this change we’re extending the ability of smart contracts to interact with external decentralized data. This is accomplished by creating a seperate network of authorized DSP nodes that manage decentralized data storage. DSPs provide data storage using regulatory compliant data storage, and securing access to the data by deploying a data handling contract on the smart contract network. These DSP-deployed data storage contracts contain relevant meta-data and permissions as well as methods for accessing the data and meta-data.
+
+  
+
+Smart contracts with permission to interact with the data-storage contract will be able to access the meta-data and reason about the properties of the data including: type, availability, and access.
+
+  
+
+Data access is provided through interacting with the data-storage contract. The system is designed such that different types of data may have their own data-storage contract that provide additional interface options.
+
+
+
 ## About The Team
 
 
