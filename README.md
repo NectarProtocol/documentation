@@ -213,3 +213,29 @@ There are two types of rollups, optimistic and zero-knowledge. They differ techn
   
 
 Both optimistic and zk-Rollups will eventually be available in Nectar. For now, Nectar is focusing on optimistic rollup implementation because zk-rollups are currently difficult and expensive to implement for complex transactions.
+
+
+
+## About The Team
+
+
+
+  
+
+Nectar is being developed by the team behind Tamarin Health. Tamarin is backed by Boost VC, which is led by Adam Draper, and has received over $1 million in grants from the National Science Foundation for their blockchain in healthcare work.
+
+  
+
+Nectar is the next project by the Tamarin team. While our Nectar GitHub is currently empty, except for our documentation paper!, our experience of healthcare and blockchain started in 2016, and Nectar is the culmination of our experience. It is simply the next logical step to bring healthcare into Web3, and we’re kicking it off with this grant.
+
+  
+
+As Adam Draper said about healthcare and blockchain: "It is a massive opportunity, but the [folks] going after it will have to have a lot of experience in healthcare. The thing we have learned about healthcare is that it's sort of a club, and you can't get in unless youre already in. Its fascinating."
+
+Three of Nectar's 4 team members have healthcare-specific graduate degrees; 2 of the 4 have worked in healthcare and healthcare administration, one at Yale New Haven Health System and has over 10 years of experience working in healthcare; and 2 of the 4 are blockchain engineers.
+
+The team behind Nectar comes from both healthcare and blockchain.
+
+Healthcare is broken and complex. But it is fixable, and the opportunity for innovation is limitless.
+
+The future of healthcare is built on Nectar.
