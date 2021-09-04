@@ -290,10 +290,7 @@ Arbitrum’s Rollup Architecture includes the following components:
     
 2.  Compressor: compresses transactions that are then uncompressed and read by ArbOS; helps save on L1 call data space
     
-3.  Sequencer
-    
-
--   Sequencer: an entity that is given authority to order transactions in the inbox of an Arbitrum Chain with the intention to provide finality instantly
+3.  Sequencer: an entity that is given authority to order transactions in the inbox of an Arbitrum Chain with the intention to provide finality instantly
     
 
   
@@ -376,42 +373,47 @@ Second, Nectar has built-in incentives via risk sharing to ensure proper complia
 
   
 
-Pre-authorized Nodes  
+*Pre-authorized Nodes*
+
 The validator network consists of HIPAA-compliant DSPs which are contractually obligated to handle data in accordance with security rules as stipulated by federal regulations. These DSPs are legal entities that have executed BAA agreements on chain, allowing us to associate specific blockchain accounts to these legal entities. To facilitate our privacy-preserving compliant network, modifications need to be made that prevent unauthorized nodes fulfilling the role of a DSPs. Network traffic between DSPs and from the Nectar client will only be permitted between approved entities.  
   
 
-Governance  
+*Governance*
+
 The Nectar network relies on authorized DSPs requiring on-chain governance to maintain the network. Modifications to the Nectar client and on-chain contracts are required to facilitate this governance. See the governance related portions of these documents for more details behind the structure proposed.
 
   
 
-Privacy-Preserving Smart Contracts
+*Privacy-Preserving Smart Contracts*
 
 To enable privacy preserving contracts some changes to the way transactions are called, smart contracts are accessed, and data is made available are required.  
   
-Permissions for Smart Contracts  
+*Permissions for Smart Contracts*
+
 To regulate access to data contained in smart contracts we are adding permissions such that contracts can be made private, with access only permitted for pre-specified accounts. Before a user can access a smart contract they will have to prove they are authorized to do so. This change means that composability between contracts can be restricted as needed. It also means that the global state of Nectar's smart contracts are private, and discreetly revealed as needed, for those authorized to see it.
 
   
 
-Private Smart Contract Invocation  
+*Private Smart Contract Invocation*
+
 To invoke a smart contract, a signed request is made to access the contract (and any composed contracts). Once authorized, a user is free to interact with the contract. A transaction is created locally, and submitted securely to the DSP network. A transaction receipt along with the hash of the pre and post contract state is sent to the aggregator to include in a batch. On Nectar the aggregator is a public function that can be done by anyone, since an aggregator can always create a batch from a single transaction, Nectar inherits the same censorship resistance as Ethereum.  
   
 After aggregating and sequencing the transaction is processed by the DSPs, and a result is created for inclusion into the next rollup block.  
   
 
-Zero Knowledge Proof verification  
+*Zero Knowledge Proof verification*
+
 The fraud proof mechanism described in Arbitrums protocol is a multi-round interactive resolution process where only the final dispute step is made public. This step has the potential to share potentially private information, as the step describes a single state change inside an smart contract. Because of the risk of exposing private information, the final resolution step needs to be encoded into a zero knowledge proof to prevent possible leaking.  
   
 Using Arbitrums dispute resolution to reduce a complex set of state changes down to a singular state change we can express the proof in binary terms such that existing zero knowledge proofs can be efficiently employed. This combined with private transaction invocation enables the preservation of private data inside smart contracts.
 
   
 
-Extensible Rollup Blocks
+*Extensible Rollup Blocks*
 
 In order to provide future networks of DSPs that selectively offer varying decentralized services, Nectars roll-up blocks belong to a unique network that defines the type of services and the state hashes of the resources those services provide. Two networks are planned at the start, a decentralized storage network that secures files in regulatory compliant data stores, and compliant smart-contract services. As future technology emerges new data services will be able to create a unique chain of Nectar blocks for those services.  
   
-Decentralized Data Storage Service
+*Decentralized Data Storage Service*
 
 The previous modifications were aimed at securing smart contracts state and execution. With this change we’re extending the ability of smart contracts to interact with external decentralized data. This is accomplished by creating a seperate network of authorized DSP nodes that manage decentralized data storage. DSPs provide data storage using regulatory compliant data storage, and securing access to the data by deploying a data handling contract on the smart contract network. These DSP-deployed data storage contracts contain relevant meta-data and permissions as well as methods for accessing the data and meta-data.
 
