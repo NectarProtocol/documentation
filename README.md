@@ -225,22 +225,13 @@ We are not interested in re-creating the wheel, so open source code that is read
 We landed on Arbitrum over Optimism because Arbitrum uses multi-round interactive proofs which offer features required for a healthcare-focused technology:  
   
 
-1.  Limitless contract size and higher per-tx gas limit
+1.  *Limitless contract size and higher per-tx gas limit*: In the case of a dispute, large transactions may require many interactive steps to get to the final step. But, because only the final dispute step is posted to L1 contract size and gas limits aren’t a concern. This is important because in healthcare, many processes are complex. It is easy to imagine large, complex contracts that support healthcare.
     
 
-1.  In the case of a dispute, large transactions may require many interactive steps to get to the final step. But, because only the final dispute step is posted to L1 contract size and gas limits aren’t a concern. This is important because in healthcare, many processes are complex. It is easy to imagine large, complex contracts that support healthcare.
+3.  *Implementation flexibility*: Healthcare is complex. The option for flexibility is important.
     
 
-3.  Implementation flexibility
-    
-
-1.  Healthcare is complex. The option for flexibility is important.
-    
-
-5.  Lowest possible cost to secure on L1
-    
-
-1.  The purpose of interactive proving is to solve the dispute off the L1 chain and post just the resolution on the L1 chain. This is one step, compared to re-execution, which solves the dispute on the L1 chain, and creates the smallest possible L1 transaction, thus reducing a main cost-contributor to rollups.
+5.  *Lowest possible cost to secure on L1*: The purpose of interactive proving is to solve the dispute off the L1 chain and post just the resolution on the L1 chain. This is one step, compared to re-execution, which solves the dispute on the L1 chain, and creates the smallest possible L1 transaction, thus reducing a main cost-contributor to rollups.
     
 
   
