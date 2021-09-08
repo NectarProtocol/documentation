@@ -441,3 +441,152 @@ The team behind Nectar comes from both healthcare and blockchain.
 Healthcare is broken and complex. But it is fixable, and the opportunity for innovation is limitless.
 
 The future of healthcare is built on Nectar.
+
+# Other Stuff
+
+  
+
+## On Healthcare Data Compliance
+
+  
+
+By 2025, global data creation is expected to reach [163 zetabytes](https://www.import.io/wp-content/uploads/2017/04/Seagate-WP-DataAge2025-March-2017.pdf) - a trillion gigabytes.
+
+  
+
+In anticipation of this and the growing power of dominant tech company’s access to and utilization of individual’s data, it’s no wonder that regulations around data security and privacy are increasing, globally: the General Data Protection Regulation (GDPR) in the European Union was passed in 2016; the California Consumer Privacy Act was passed in 2018; and China’s data protection law passed in [2021](https://www.reuters.com/world/china/china-passes-new-personal-data-privacy-law-take-effect-nov-1-2021-08-20/), just to cite a few examples.
+
+  
+
+More regulated industries such as healthcare, in contrast, have had strict data security and privacy laws in place for much longer.
+
+  
+
+The most well-known and globally implemented example of healthcare data security and privacy laws is the United States Health Insurance Portability and Accountability Act ([HIPAA](https://www.congress.gov/104/plaws/publ191/PLAW-104publ191.pdf)) of 1996
+
+  
+
+(Note: Hipaaaaaaaaaah. It’s HIPAA. There is no relation to, or protection for, Hippos 🦛 )
+
+  
+
+Many folks know the surface level intent of HIPAA: it protects data that can be traced to an individual. Stated differently, it protects personally identifiable health information.
+
+  
+
+Specifically, it requires:
+
+-   written policies (policies and contractual agreements)
+    
+-   behavioral expectations (human behavior); and
+    
+-   technological security (data movement and storage)
+    
+
+  
+
+These requirements are specifically for [Covered Entities and Business Associates](https://www.hhs.gov/hipaa/for-professionals/covered-entities/index.html).
+
+  
+
+Covered entities are:
+
+-   Healthcare providers (such as doctors, nurses, chiropractors, or pharmacies)
+    
+-   Health Plans (i.e.: insurance companies, health management organizations, employer health plans)
+    
+-   Healthcare data clearinghouses (i.e.: companies that collect and sort data and then make millions of dollars selling your de-identified data)
+    
+
+  
+
+Business Associates are businesses that receive, process, analyze, store, use, etc. data from Covered Entities (doctors, insurance companies, etc.) listed above.
+
+  
+
+And, if Business Associates work with other companies, those companies are also required, via contractual agreement, to adhere to strict protocols for data security and privacy. This creates a chain of contractual agreements that link back to the Covered Entity.
+
+  
+
+Failure to comply results in hefty fines and a listing on the HIPAA [Wall of Shame](https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf) 😃
+
+  
+
+While it is true that healthcare data policies are due for an upgrade, specifically [in the United States](https://www.reliasmedia.com/articles/140405-big-data-in-healthcare-privacy-is-major-ethical-concern), the regulations are not likely to go anywhere (especially in light of growing data regulations for non-healthcare data).
+
+  
+
+Thus, in order to drive innovation and to build the data web that underpins the future of healthcare, the access, storage, and transportation of personally identifiable health data must be regulatory compliant.
+
+  
+
+The reader with a keen eye will think, “but what if the patient owns their data or the data doesn’t originate from a Covered Entity at all?” as a way to escape data regulation.
+
+  
+
+This is a great point. It is correct that if the data does not originate from a Covered Entity then HIPAA rules do not apply.
+
+  
+
+However, excluding personally identifiable data from the best and original source: the patient visit, creates a weak dataset. Wearable data, in and of itself, is not that [helpful](https://mhealth.jmir.org/2021/3/e20738); and it would take an incalculable amount of time to manually (yes, manual. Most physician offices still send your data by CD) collect data via only the patient-directed route.
+
+  
+
+The best data set combines data that would fall under HIPAA and patient-provided data (such as data that has been reviewed and approved by the patient; wearable data).
+
+  
+
+It is crucial for decentralized and Web 3 technology to adhere to healthcare data regulations.
+
+  
+
+Regulatory compliance aside, there’s a growing concern for how health information is being or could be used, and an expectation that data remains safe, even if it didn’t originate from a Covered Entity. Concern of data privacy was one of the cited reasons many rejected vaccination passports during the COVID-19 pandemic (which is actually an incorrect interpretation of HIPAA). And, there is substantial concern among clinicians, professionals, and patients with the large tech firms (GAFA) gaining access to healthcare data for [their own profit](https://www.bbc.com/news/business-57817804).
+
+  
+
+So even if HIPAA doesn’t legally apply, many want their healthcare data protected and safe.
+
+  
+
+When folks express anger toward the healthcare industry, the anger isn’t that they don’t want their data to be secure and protected. The anger is toward how the healthcare system runs. It’s:
+
+  
+
+-   The asynchronous nature of care and data accessibility
+    
+-   The general inability to access data due to greedy business practices
+    
+-   Misaligned incentives
+    
+-   The reimbursement model that rewards sick care (payment based on number of procedures) instead of based on well-care (payment based on healthy outcomes)
+    
+-   The infuriating cyclical process of prior-authorization required before care can even be provided
+    
+-   The resulting administrative hours wasted to get insurance coverage of the procedure
+    
+-   The cost, inefficiency, and time (spanning years, sometimes decades) of the clinical trial process required to get to the regulatory approval process for devices, medications, or therapies
+    
+-   The length of time it takes for regulatory approval of devices, medications, or therapies including novel therapies such as psychedelic therapy
+    
+-   The inefficiency of the supply chain process, and ease of disruption to the supply chain process akin to 2020 delays during the COVID-19 pandemic
+    
+-   The technologically outdated processes for training and re-licensure
+    
+-   The lost time and compromise to patient care caused by credentialing delays
+    
+
+  
+
+This is why Nectar exists. Nectar complies with data security regulations so that innovation is not shut down.
+
+  
+
+HIPAA compliant nodes add extra protection for patients in countries with less-strict or non-existent healthcare data privacy and security regulations. And, for countries with more strict regulations than HIPAA, HIPAA serves as a base for compliance. Nodes in Nectar can differentiate themselves by implementing other healthcare data privacy and security regulations to follow.
+
+  
+
+​​We chose to start with HIPAA because it is the most widely known and used healthcare-specific data protection regulation, and it is also not overly onerous to implement. It’s a good starting point. Nectar will add other regulatory requirements to make the network extensible outside healthcare, such as GDPR or state-based data privacy laws such as those in California, Virginia, and Colorado.
+
+  
+
+Nectar is compatible with any other data security and privacy regulations. Nodes can offer and market their additional data privacy and security services that help application developers remain compliant with other regulations such as the United States Family Educational Rights and Privacy Act (FERPA) of 1974; Gramm Leach Bliley Act (GLBA) for banks in the United States; Virginia's, California’s, and Colorado’s data privacy acts (a growing trend in the United States); or GDPR which covers all of the European Union. As data grows, so do the requirements for protecting that data.
