@@ -59,7 +59,8 @@ An infrastructure that is compliant with existing and increasing regulations on 
 This infrastructure is Nectar.
 
 
-#Introducing: Nectar
+
+# Introducing: Nectar
 
 
 
