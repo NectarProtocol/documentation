@@ -1,11 +1,9 @@
 # Nectar Protocol
 
 
-## Introduction
+# Introduction
 
 
-
-  
 In 2014, the [Living Heart Project](https://www.3ds.com/products-services/simulia/solutions/life-sciences-healthcare/the-living-heart-project/) kicked off, debuting the first simulated real-life heart. Powered by the 3DExperience platform from Dassault Systèmes, the research has brought together leading physicians, researchers, educators, medical device developers, regulatory agencies, and practicing cardiologists from across the world to develop personalized digital heart models. The project just received additional federal funding, expanding the scope to virtual patients and computational modeling.
 
   
@@ -22,11 +20,11 @@ In 2019, a surgeon in China successfully completed a liver removal of a lab anim
 
   
 
-In 2020, because of the COVID-19 Pandemic, clinicians in the United States were allowed to practice telemedicine [across state borders](https://www.hhs.gov/coronavirus/telehealth/index.html) without concern to their State Licensure. In 2021, the Center for Care Innovations presented a host of evidence that, for many clinical applications, telemedicine was [*just as, if not more effective*,](https://www.careinnovations.org/virtualcare/resources/evidence-for-telemedicine-efficacy-and-quality/) than in-person care.
+In 2020, because of the COVID-19 Pandemic, clinicians in the United States were allowed to practice telemedicine [across state borders](https://www.hhs.gov/coronavirus/telehealth/index.html) without concern for their State Licensure. In 2021, the Center for Care Innovations presented a host of evidence that, for many clinical applications, telemedicine was [just as if not more effective](https://www.careinnovations.org/virtualcare/resources/evidence-for-telemedicine-efficacy-and-quality/) than in-person care.
 
   
 
-In 2021, the opportunity of *in silico* trials (trials performed by computer simulation) promises [better, faster, and cheaper clinical trials](https://trialsjournal.biomedcentral.com/articles/10.1186/s13063-020-05002-w).
+In 2021, the opportunity of in silico trials promises [better, faster, and cheaper clinical trials](https://trialsjournal.biomedcentral.com/articles/10.1186/s13063-020-05002-w) by assessing potential drug and therapy impact via computer simulation and large datasets.
 
   
 
@@ -38,51 +36,27 @@ The future of healthcare is not bound by geographical boundaries; it blurs the l
 
   
 
-But, healthcare has strict data and security protocols and regulations - specifically for personally identifiable data.
+The key to Web3 for healthcare is personalized medicine which is made possible by personalized, identifiable data.
 
   
 
-The key to Web3 for healthcare is *personalized medicine* which is made possible by *personalized, identifiable data*.
+This elevates the importance and necessity of data in Web3. It also means that “ethical issues related to fair and responsible data usage, as well as [privacy, ownership, security, and authentication](https://www2.deloitte.com/us/en/insights/topics/digital-transformation/web-3-0-technologies-in-business.html) are paramount.”
 
   
 
-But, “ethical issues related to fair and responsible data usage, as well as privacy, ownership, security, and authentication are paramount.”
+Using healthcare data is a bit more challenging because of the strict data and security regulations specifically for personally identifiable data. And, in general, with the [growing concern](https://www.internetsociety.org/resources/doc/2019/trust-opportunity-exploring-consumer-attitudes-to-iot/) of how personally identifiable data is being used, the regulations around data security are likely to get more strict, not disappear.
 
   
 
-Cutting edge, Web3 innovation cannot ignore data and security protocols and regulations, no matter how outdated the regulations are.
+In healthcare’s Web3, it is crucial to balance data security regulations without crushing potential innovation.
 
   
 
-Additionally, innovation occurs at the enterprise level.
+An infrastructure that is compliant with existing and increasing regulations on data security, but also fosters innovation and decentralization can create the balance needed for healthcare’s future in Web3.
 
   
 
--   The Living Heart Project was initiated by Dassault Systèmes, a company founded in 1981 with €4.5B annual revenues;
-    
--   The personalized knee replacements were conducted at a teaching hospital;
-    
--   The HoloLens shoulder replacement was conducted at a 1,097 bed hospital in France (to compare, Massachusetts General, one of the leading hospitals in the United States, has 1,059 beds - these are large teaching institutions)
-    
--   The remote surgery in China was conducted by a surgeon from Beijing's 301 Hospital which has 4,000 beds
-    
--   While telehealth was started by startups, the leading telehealth company is now valued north of $15B (and they've been HIPAA compliant since they began)
-    
--   And, *in silico* trials are led by researchers which are either in teaching and university institutions or, if a startup, came from teaching and university institutions
-    
-
-Enterprises do not skimp on data and security practices.
-
-  
-
-We’ve also learned, from Web1 through Web2, that public networks (Internet vs. Intranet) and [open source software](https://ieeexplore.ieee.org/document/7160503) are leading factors in innovation.
-
-  
-
-The future of healthcare requires a foundation that fosters innovation in an open, accessible, data rich, regulatory compliant way, while remaining flexible enough to accommodate data and security policies that inevitably modernize.
-
-
-The future of healthcare is built on Nectar.
+This infrastructure is Nectar.
 
 
 Introducing: Nectar
