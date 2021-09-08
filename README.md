@@ -59,7 +59,10 @@ An infrastructure that is compliant with existing and increasing regulations on 
 This infrastructure is Nectar.
 
 
-Introducing: Nectar
+#Introducing: Nectar
+
+
+
 Nectar is a publicly accessible, highly scalable, privacy preserving, regulatory compliant network that creates a data rich environment for Web3 in healthcare. 
 
 Nectar is an open source protocol built using multi-round interactive, optimistic rollup technology and is secured by the Ethereum blockchain. Rollups take processing off the main chain (Layer 1) by computing, storing, and batching transactions off-chain (on Layer 2). This creates a dramatic 100x scaling effect compared to L1, enabling up to 4,500 transactions per second. Rollups paired with Ethereum’s future Eth2 sharding increases throughput beyond 100,000 transactions per second. This high throughput is required in order to meet the existing demand of 82 million daily healthcare transactions globally.
