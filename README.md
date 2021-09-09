@@ -62,35 +62,59 @@ This infrastructure is Nectar.
 
 # Introducing: Nectar
 
+Nectar is a publicly accessible, highly scalable, privacy preserving, regulatory compliant network that creates a data rich environment for Web3 in healthcare.
 
+  
 
-Nectar is a publicly accessible, highly scalable, privacy preserving, regulatory compliant network that creates a data rich environment for Web3 in healthcare. 
+Nectar is an open source protocol built using multi-round interactive, optimistic rollup technology and is secured by the Ethereum blockchain. Rollups take processing off the main chain (Layer 1) by computing, storing, and batching transactions off-chain (on Layer 2). This creates a dramatic [100x](https://tim.blog/2021/03/09/vitalik-buterin-naval-ravikant-transcript/) scaling effect compared to L1, enabling up to 4,500 transactions per second. Rollups paired with Ethereum’s future Eth2 sharding increases throughput beyond [100,000](https://vitalik.ca/general/2021/01/05/rollup.html) transactions per second. This high throughput is required in order to meet the existing demand of [82 million](https://www.himss.org/jhim/archive/volume-17-number-1-2003) daily healthcare transactions globally.
 
-Nectar is an open source protocol built using multi-round interactive, optimistic rollup technology and is secured by the Ethereum blockchain. Rollups take processing off the main chain (Layer 1) by computing, storing, and batching transactions off-chain (on Layer 2). This creates a dramatic 100x scaling effect compared to L1, enabling up to 4,500 transactions per second. Rollups paired with Ethereum’s future Eth2 sharding increases throughput beyond 100,000 transactions per second. This high throughput is required in order to meet the existing demand of 82 million daily healthcare transactions globally.
+  
 
 Rollups that use multi-round interactive fraud proofs secure the transaction at the lowest Layer 1 (L1) gas cost possible. This is thanks to a special protocol that, when a final transaction is challenged as potentially fraudulent, the protocol “dissects” the assertion to the lowest level possible to identify whether the initial or challenger assertion is correct. This dissection occurs off-chain, and the final result is put on-chain as a much smaller transaction than if the entire dissection was on-chain, or if re-execution was used (which re-executes the transaction on-chain). Given the potential complexity and size of enterprise level and healthcare-specific smart contracts, a protocol that conducts its fraud proof off-chain reduces the L1 gas cost to as low as possible is ideal. In addition, keeping the challenge process off-chain and submitting the final transaction with a zk-Proof is one way in which the rollup architecture preserves data privacy.
 
-Despite enterprises' history of experimenting on private blockchains, Nectar is intentionally secured by Ethereum. Public blockchains, such as Ethereum, provide stronger security, immutability, transparency, lower costs, and the ability to interoperate with other applications compared to private blockchains. Rollups can offer the privacy and security required for enterprise, while offering the additional benefit of public blockchains. 
+  
 
-In order for healthcare enterprises to reap the benefits of a public blockchain, the technology must be safe to use and regulatory compliant, which means adhering to existing data privacy and security regulations. In addition to keeping transactions off L1, Nectar accomplishes regulatory compliance in two additional ways:
+Despite enterprises' history of experimenting on private blockchains, Nectar is intentionally secured by Ethereum. Public blockchains, such as Ethereum, provide stronger security, immutability, transparency, [lower costs](https://github.com/EYBlockchain/fundamental-cost-of-ownership/blob/master/EY%20Total%20Cost%20of%20Ownership%20for%20Blockchain%20Solutions.pdf), and the ability to interoperate with other applications compared to private blockchains. Rollups can offer the privacy and security required for enterprise, while offering the additional benefit of public blockchains.
 
+  
 
-Pre-Authorized Nodes
-Privacy Preserving Contracts
+In order for healthcare enterprises to reap the benefits of a public blockchain, the technology must be safe to use and regulatory compliant, which means adhering to existing data privacy and security regulations. In addition to keeping transactions off L1, Nectar accomplishes regulatory compliance in two additional ways:  
+  
+
+1.  Authorized Nodes
+    
+2.  Privacy Preserving Contracts
+    
+
+  
 
 The nodes in Nectar are called Data Service Providers (DSPs) and they are required to adhere to HIPAA guidelines by running HIPAA compliant servers and maintaining certain policies for the safe storage and transfer of healthcare data. HIPAA was chosen as the first regulatory requirement in Nectar because it is the most well known, widely used healthcare data security regulation, and it is not overly onerous to implement compared to other regulations such as GDPR. (Nectar is not limited to just HIPAA compliance.)
 
-Adherence to HIPAA is initially assessed in a pre-authorization process prior to a DSP joining Nectar. To maintain compliance, DSPs participate in regular audits of HIPAA compliance; passed audits enable DSPs to remain in the network; failed audits kick DSPs out of the network. 
+  
+
+Adherence to HIPAA is initially assessed in a pre-authorization process prior to a DSP joining Nectar. To maintain compliance, DSPs participate in regular audits of HIPAA compliance; passed audits enable DSPs to remain in the network; failed audits kick DSPs out of the network.
+
+  
 
 Nectar also offers a Bring Your Own Node option where the user or dApp developer can run their own HIPAA compliant node in order to keep their data fully private and to adhere to regulatory requirements for data accountability even if it is.
 
-The privacy-preserving nature of Nectar comes from Permissioned Smart Contracts and Private Smart Contract Invocation. The focus on privacy preservation is what makes Nectar accessible to the behemoth enterprises that are leading Web3 innovation. It can encapsulate smart contacts, restricting access to only those authorized.
+  
+
+The private nature of Nectar comes from Permissioned Smart Contracts and Private Smart Contract Invocation. The focus on privacy preservation is what makes Nectar accessible to the behemoth enterprises that are leading Web3 innovation. It can encapsulate smart contacts, restricting access to only those authorized.
+
+  
 
 By creating a highly-scalable yet private and low-cost blockchain environment, enterprises can confidently use this technology to drive Web3 innovation.
 
-HIPAA compliant DSPs also create the distributed data storage infrastructure of Nectar. Private data analytics is a promising, efficient Web3 technology and can have a significant impact on cost savings for enterprises. While individuals and small businesses are likely to adopt distributed data storage before enterprise, the potential for better security, lower cost, and new revenue streams for enterprises will be more enticing than simply shifting an on-prem server to a cloud-based provider.
+  
 
-Nectar’s unique combination of roll up technology, focus on privacy preservation, and HIPAA compliance creates the needed foundation for the Web3 future of healthcare. 
+HIPAA compliant DSPs also create the distributed data storage infrastructure of Nectar. Private data analytics is a promising, efficient Web3 technology and can have a [significant impact](https://www.storj.io/blog/comparing-the-economics-of-centralized-and-decentralized-cloud-storage) on cost savings for enterprises. While individuals and small businesses are likely to adopt distributed data storage before enterprise, the potential for better security, lower cost, and new revenue streams for enterprises will be more enticing than simply shifting an on-prem server to a cloud-based provider.
+
+  
+
+Nectar’s unique combination of roll up technology, focus on privacy preservation, and HIPAA compliance creates the needed foundation for the Web3 future of healthcare.
+
+  
 
 # Nectar Rollup Deep Dive
 
@@ -118,10 +142,8 @@ However, blockchains, in their current form, have flaws that prevent its leading
     
 
   
-  
 
 These don’t work for healthcare, and especially as a foundation for driving innovation in healthcare because:  
-  
   
 
 1.  82 million transactions occur daily in healthcare globally
@@ -192,7 +214,7 @@ There are two types of rollups, optimistic and zero-knowledge. They differ techn
 
 Both optimistic and zk-Rollups will eventually be available in Nectar. For now, Nectar is focusing on optimistic rollup implementation because zk-rollups are currently difficult and expensive to implement for complex transactions.
 
-
+  
 
 ## Why an Arbitrum Base
 
@@ -203,13 +225,22 @@ We are not interested in re-creating the wheel, so open source code that is read
 We landed on Arbitrum over Optimism because Arbitrum uses multi-round interactive proofs which offer features required for a healthcare-focused technology:  
   
 
-1.  *Limitless contract size and higher per-tx gas limit*: In the case of a dispute, large transactions may require many interactive steps to get to the final step. But, because only the final dispute step is posted to L1 contract size and gas limits aren’t a concern. This is important because in healthcare, many processes are complex. It is easy to imagine large, complex contracts that support healthcare.
+1.  Limitless contract size and higher per-tx gas limit
     
 
-3.  *Implementation flexibility*: Healthcare is complex. The option for flexibility is important.
+1.  In the case of a dispute, large transactions may require many interactive steps to get to the final step. But, because only the final dispute step is posted to L1 contract size and gas limits aren’t a concern. This is important because in healthcare, many processes are complex. It is easy to imagine large, complex contracts that support healthcare.
     
 
-5.  *Lowest possible cost to secure on L1*: The purpose of interactive proving is to solve the dispute off the L1 chain and post just the resolution on the L1 chain. This is one step, compared to re-execution, which solves the dispute on the L1 chain, and creates the smallest possible L1 transaction, thus reducing a main cost-contributor to rollups.
+3.  Implementation flexibility
+    
+
+1.  Healthcare is complex. The option for flexibility is important.
+    
+
+5.  Lowest possible cost to secure on L1
+    
+
+1.  The purpose of interactive proving is to solve the dispute off the L1 chain and post just the resolution on the L1 chain. This is one step, compared to re-execution, which solves the dispute on the L1 chain, and creates the smallest possible L1 transaction, thus reducing a main cost-contributor to rollups.
     
 
   
@@ -259,7 +290,10 @@ Arbitrum’s Rollup Architecture includes the following components:
     
 2.  Compressor: compresses transactions that are then uncompressed and read by ArbOS; helps save on L1 call data space
     
-3.  Sequencer: an entity that is given authority to order transactions in the inbox of an Arbitrum Chain with the intention to provide finality instantly
+3.  Sequencer
+    
+
+-   Sequencer: an entity that is given authority to order transactions in the inbox of an Arbitrum Chain with the intention to provide finality instantly
     
 
   
@@ -342,14 +376,12 @@ Second, Nectar has built-in incentives via risk sharing to ensure proper complia
 
   
 
-*Pre-authorized Nodes*
-
+*Pre-authorized Nodes*  
 The validator network consists of HIPAA-compliant DSPs which are contractually obligated to handle data in accordance with security rules as stipulated by federal regulations. These DSPs are legal entities that have executed BAA agreements on chain, allowing us to associate specific blockchain accounts to these legal entities. To facilitate our privacy-preserving compliant network, modifications need to be made that prevent unauthorized nodes fulfilling the role of a DSPs. Network traffic between DSPs and from the Nectar client will only be permitted between approved entities.  
   
 
-*Governance*
-
-The Nectar network relies on authorized DSPs requiring on-chain governance to maintain the network. Modifications to the Nectar client and on-chain contracts are required to facilitate this governance. See the governance related portions of these documents for more details behind the structure proposed.
+*Governance*  
+The Nectar network relies on authorized DSPs requiring on-chain governance to maintain the network. Modifications to the Nectar client and on-chain contracts are required to facilitate this governance. The governance structure and details are not specified in this document, but the goal is to start out centralized and move towards decentrality over time.
 
   
 
@@ -358,20 +390,20 @@ The Nectar network relies on authorized DSPs requiring on-chain governance to ma
 To enable privacy preserving contracts some changes to the way transactions are called, smart contracts are accessed, and data is made available are required.  
   
 *Permissions for Smart Contracts*
-
+  
 To regulate access to data contained in smart contracts we are adding permissions such that contracts can be made private, with access only permitted for pre-specified accounts. Before a user can access a smart contract they will have to prove they are authorized to do so. This change means that composability between contracts can be restricted as needed. It also means that the global state of Nectar's smart contracts are private, and discreetly revealed as needed, for those authorized to see it.
 
   
 
 *Private Smart Contract Invocation*
-
+  
 To invoke a smart contract, a signed request is made to access the contract (and any composed contracts). Once authorized, a user is free to interact with the contract. A transaction is created locally, and submitted securely to the DSP network. A transaction receipt along with the hash of the pre and post contract state is sent to the aggregator to include in a batch. On Nectar the aggregator is a public function that can be done by anyone, since an aggregator can always create a batch from a single transaction, Nectar inherits the same censorship resistance as Ethereum.  
   
 After aggregating and sequencing the transaction is processed by the DSPs, and a result is created for inclusion into the next rollup block.  
   
 
 *Zero Knowledge Proof verification*
-
+  
 The fraud proof mechanism described in Arbitrums protocol is a multi-round interactive resolution process where only the final dispute step is made public. This step has the potential to share potentially private information, as the step describes a single state change inside an smart contract. Because of the risk of exposing private information, the final resolution step needs to be encoded into a zero knowledge proof to prevent possible leaking.  
   
 Using Arbitrums dispute resolution to reduce a complex set of state changes down to a singular state change we can express the proof in binary terms such that existing zero knowledge proofs can be efficiently employed. This combined with private transaction invocation enables the preservation of private data inside smart contracts.
@@ -392,179 +424,68 @@ Smart contracts with permission to interact with the data-storage contract will 
 
   
 
-Data access is provided through interacting with the data-storage contract. The system is designed such that different types of data may have their own data-storage contract that provide additional interface options.
-
-
-
-## About The Team
-
-
+Data access is provided through interacting with the data-storage contract. The system is designed such that different types of data may have their own data-storage contract that provide additional interface options.  
+  
+**Nectar Roadmap**
 
   
 
-Nectar is being developed by the team behind Tamarin Health. Tamarin is backed by Boost VC, which is led by Adam Draper, and has received over $1 million in grants from the National Science Foundation for their blockchain in healthcare work.
+While we are able to stand on the shoulders of giants (🙏🙌 Open Source Community) there is quite a bit of re-tooling needed to make this adoptable by data-regulated industries such as healthcare.
 
   
 
-Nectar is the next project by the Tamarin team. While our Nectar GitHub is currently empty, except for our documentation paper!, our experience of healthcare and blockchain started in 2016, and Nectar is the culmination of our experience. It is simply the next logical step to bring healthcare into Web3, and we’re kicking it off with this grant.
+*Q3 2021*
+
+Nectar Protocol launches and incorporates
+
+Expand engineering team
+
+Development of Nectar rollup begins
 
   
 
-As Adam Draper said about healthcare and blockchain: "It is a massive opportunity, but the [folks] going after it will have to have a lot of experience in healthcare. The thing we have learned about healthcare is that it's sort of a club, and you can't get in unless youre already in. Its fascinating."
+*Q4 2021*
 
-Three of Nectar's 4 team members have healthcare-specific graduate degrees; 2 of the 4 have worked in healthcare and healthcare administration, one at Yale New Haven Health System and has over 10 years of experience working in healthcare; and 2 of the 4 are blockchain engineers.
+ZKP Dispute Resolution development begins
 
-The team behind Nectar comes from both healthcare and blockchain.
-
-Healthcare is broken and complex. But it is fixable, and the opportunity for innovation is limitless.
-
-The future of healthcare is built on Nectar.
-
-# Other Stuff
+NectarOS development begins
 
   
 
-## On Healthcare Data Compliance
+*Q1 and Q2 2022*
+
+Continued implementation of rollup, NectarOS, and ZKP Resolution
+
+Begin design and implementation: Decentralized Data Storage (DDS)
 
   
 
-By 2025, global data creation is expected to reach [163 zetabytes](https://www.import.io/wp-content/uploads/2017/04/Seagate-WP-DataAge2025-March-2017.pdf) - a trillion gigabytes.
+*Q3 2022*
+
+ZKP Resolution integrated into Rollup and NectarOS on Testnet
+
+Testnet deployment of Rollup
+
+Continued implementation of DDS
+
+Alpha NectarOS release
 
   
 
-In anticipation of this and the growing power of dominant tech company’s access to and utilization of individual’s data, it’s no wonder that regulations around data security and privacy are increasing, globally: the General Data Protection Regulation (GDPR) in the European Union was passed in 2016; the California Consumer Privacy Act was passed in 2018; and China’s data protection law passed in [2021](https://www.reuters.com/world/china/china-passes-new-personal-data-privacy-law-take-effect-nov-1-2021-08-20/), just to cite a few examples.
+*Q4 2022*
+
+Integrate NectarOS, Rollup, and DDS
+
+Audit codebase in preparation for mainnet deploy
 
   
 
-More regulated industries such as healthcare, in contrast, have had strict data security and privacy laws in place for much longer.
+*2023*
+
+Mainnet Launch of Nectar
 
   
-
-The most well-known and globally implemented example of healthcare data security and privacy laws is the United States Health Insurance Portability and Accountability Act ([HIPAA](https://www.congress.gov/104/plaws/publ191/PLAW-104publ191.pdf)) of 1996
-
+**Concluding Remarks**  
+With Nectar we aim to enable Ethereum for data-regulated industries, starting with HIPAA and protected health information. To do this we’re proposing the use of authorized nodes, private contract execution, and a privacy-preserving interactive dispute mechanism.  
   
-
-(Note: Hipaaaaaaaaaah. It’s HIPAA. There is no relation to, or protection for, Hippos 🦛 )
-
-  
-
-Many folks know the surface level intent of HIPAA: it protects data that can be traced to an individual. Stated differently, it protects personally identifiable health information.
-
-  
-
-Specifically, it requires:
-
--   written policies (policies and contractual agreements)
-    
--   behavioral expectations (human behavior); and
-    
--   technological security (data movement and storage)
-    
-
-  
-
-These requirements are specifically for [Covered Entities and Business Associates](https://www.hhs.gov/hipaa/for-professionals/covered-entities/index.html).
-
-  
-
-Covered entities are:
-
--   Healthcare providers (such as doctors, nurses, chiropractors, or pharmacies)
-    
--   Health Plans (i.e.: insurance companies, health management organizations, employer health plans)
-    
--   Healthcare data clearinghouses (i.e.: companies that collect and sort data and then make millions of dollars selling your de-identified data)
-    
-
-  
-
-Business Associates are businesses that receive, process, analyze, store, use, etc. data from Covered Entities (doctors, insurance companies, etc.) listed above.
-
-  
-
-And, if Business Associates work with other companies, those companies are also required, via contractual agreement, to adhere to strict protocols for data security and privacy. This creates a chain of contractual agreements that link back to the Covered Entity.
-
-  
-
-Failure to comply results in hefty fines and a listing on the HIPAA [Wall of Shame](https://ocrportal.hhs.gov/ocr/breach/breach_report.jsf) 😃
-
-  
-
-While it is true that healthcare data policies are due for an upgrade, specifically [in the United States](https://www.reliasmedia.com/articles/140405-big-data-in-healthcare-privacy-is-major-ethical-concern), the regulations are not likely to go anywhere (especially in light of growing data regulations for non-healthcare data).
-
-  
-
-Thus, in order to drive innovation and to build the data web that underpins the future of healthcare, the access, storage, and transportation of personally identifiable health data must be regulatory compliant.
-
-  
-
-The reader with a keen eye will think, “but what if the patient owns their data or the data doesn’t originate from a Covered Entity at all?” as a way to escape data regulation.
-
-  
-
-This is a great point. It is correct that if the data does not originate from a Covered Entity then HIPAA rules do not apply.
-
-  
-
-However, excluding personally identifiable data from the best and original source: the patient visit, creates a weak dataset. Wearable data, in and of itself, is not that [helpful](https://mhealth.jmir.org/2021/3/e20738); and it would take an incalculable amount of time to manually (yes, manual. Most physician offices still send your data by CD) collect data via only the patient-directed route.
-
-  
-
-The best data set combines data that would fall under HIPAA and patient-provided data (such as data that has been reviewed and approved by the patient; wearable data).
-
-  
-
-It is crucial for decentralized and Web 3 technology to adhere to healthcare data regulations.
-
-  
-
-Regulatory compliance aside, there’s a growing concern for how health information is being or could be used, and an expectation that data remains safe, even if it didn’t originate from a Covered Entity. Concern of data privacy was one of the cited reasons many rejected vaccination passports during the COVID-19 pandemic (which is actually an incorrect interpretation of HIPAA). And, there is substantial concern among clinicians, professionals, and patients with the large tech firms (GAFA) gaining access to healthcare data for [their own profit](https://www.bbc.com/news/business-57817804).
-
-  
-
-So even if HIPAA doesn’t legally apply, many want their healthcare data protected and safe.
-
-  
-
-When folks express anger toward the healthcare industry, the anger isn’t that they don’t want their data to be secure and protected. The anger is toward how the healthcare system runs. It’s:
-
-  
-
--   The asynchronous nature of care and data accessibility
-    
--   The general inability to access data due to greedy business practices
-    
--   Misaligned incentives
-    
--   The reimbursement model that rewards sick care (payment based on number of procedures) instead of based on well-care (payment based on healthy outcomes)
-    
--   The infuriating cyclical process of prior-authorization required before care can even be provided
-    
--   The resulting administrative hours wasted to get insurance coverage of the procedure
-    
--   The cost, inefficiency, and time (spanning years, sometimes decades) of the clinical trial process required to get to the regulatory approval process for devices, medications, or therapies
-    
--   The length of time it takes for regulatory approval of devices, medications, or therapies including novel therapies such as psychedelic therapy
-    
--   The inefficiency of the supply chain process, and ease of disruption to the supply chain process akin to 2020 delays during the COVID-19 pandemic
-    
--   The technologically outdated processes for training and re-licensure
-    
--   The lost time and compromise to patient care caused by credentialing delays
-    
-
-  
-
-This is why Nectar exists. Nectar complies with data security regulations so that innovation is not shut down.
-
-  
-
-HIPAA compliant nodes add extra protection for patients in countries with less-strict or non-existent healthcare data privacy and security regulations. And, for countries with more strict regulations than HIPAA, HIPAA serves as a base for compliance. Nodes in Nectar can differentiate themselves by implementing other healthcare data privacy and security regulations to follow.
-
-  
-
-​​We chose to start with HIPAA because it is the most widely known and used healthcare-specific data protection regulation, and it is also not overly onerous to implement. It’s a good starting point. Nectar will add other regulatory requirements to make the network extensible outside healthcare, such as GDPR or state-based data privacy laws such as those in California, Virginia, and Colorado.
-
-  
-
-Nectar is compatible with any other data security and privacy regulations. Nodes can offer and market their additional data privacy and security services that help application developers remain compliant with other regulations such as the United States Family Educational Rights and Privacy Act (FERPA) of 1974; Gramm Leach Bliley Act (GLBA) for banks in the United States; Virginia's, California’s, and Colorado’s data privacy acts (a growing trend in the United States); or GDPR which covers all of the European Union. As data grows, so do the requirements for protecting that data.
+The ability to responsibly use decentralized technology with private health information will enable healthcare innovations that can improve the quality and availability of healthcare, as well as enable a patient-centric approach to private health data.
