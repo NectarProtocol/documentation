@@ -232,51 +232,60 @@ Second, Nectar has built-in incentives via risk sharing to ensure proper complia
 
   
 
-### Decentralized Storage
+### Network Improvements
+
+To enable a privacy preserving network some changes are necessary.
 
   
 
-#### Pre-authorized Nodes  
-The validator network consists of HIPAA-compliant DSPs which are contractually obligated to handle data in accordance with security rules as stipulated by federal regulations. These DSPs are legal entities that have executed BAA agreements on chain, allowing us to associate specific blockchain accounts to these legal entities. To facilitate our privacy-preserving compliant network, modifications need to be made that prevent unauthorized nodes fulfilling the role of a DSPs. Network traffic between DSPs and from the Nectar client will only be permitted between approved entities.  
-  
+**Governance**  
 
-Governance  
 The Nectar network relies on authorized DSPs requiring on-chain governance to maintain the network. Modifications to the Nectar client and on-chain contracts are required to facilitate this governance. The governance structure and details are not specified in this document, but the goal is to start out centralized and move towards decentrality over time.
 
   
 
-Privacy-Preserving Smart Contracts
+**Pre-authorized Nodes**  
+
+The validator network consists of HIPAA-compliant DSPs which are contractually obligated to handle data in accordance with security rules as stipulated by federal regulations. These DSPs are legal entities that have executed BAA agreements on-chain, allowing us to associate specific blockchain accounts to these legal entities. To facilitate our privacy-preserving compliant network, modifications need to be made that prevent unauthorized nodes fulfilling the role of a DSPs. Network traffic between DSPs and from the Nectar client will only be permitted between approved entities.
+
+### Privacy-Preserving Smart Contracts
 
 To enable privacy preserving contracts some changes to the way transactions are called, smart contracts are accessed, and data is made available are required.  
   
-Permissions for Smart Contracts  
+**Permissions for Smart Contracts**  
+
 To regulate access to data contained in smart contracts we are adding permissions such that contracts can be made private, with access only permitted for pre-specified accounts. Before a user can access a smart contract they will have to prove they are authorized to do so. This change means that composability between contracts can be restricted as needed. It also means that the global state of Nectar's smart contracts are private, and discreetly revealed as needed, for those authorized to see it.
 
   
 
-Private Smart Contract Invocation  
+**Private Smart Contract Invocation**  
+
 To invoke a smart contract, a signed request is made to access the contract (and any composed contracts). Once authorized, a user is free to interact with the contract. A transaction is created locally, and submitted securely to the DSP network. A transaction receipt along with the hash of the pre and post contract state is sent to the aggregator to include in a batch. On Nectar the aggregator is a public function that can be done by anyone, since an aggregator can always create a batch from a single transaction, Nectar inherits the same censorship resistance as Ethereum.  
   
 After aggregating and sequencing the transaction is processed by the DSPs, and a result is created for inclusion into the next rollup block.
 
   
 
-Extensible Rollup Blocks
+### L2 Improvements
+
+To enable decentralized data and future data services, some changes are required in the rollup contracts and new interfaces made available at the smart contract level.
+
+  
+
+**Extensible Rollup Blocks**
 
 In order to provide future networks of DSPs that selectively offer varying decentralized services, Nectar’s roll-up blocks belong to a unique network that defines the type of services and the state hashes of the resources those services provide. Two networks are planned at the start, a decentralized storage network that secures files in regulatory compliant data stores, and compliant smart-contract services. As future technology emerges new data services will be able to create a unique chain of Nectar blocks for those services.  
   
-Decentralized Data Storage Service
+**Decentralized Data Storage Service**
 
-The previous modifications were aimed at securing smart contracts state and execution. With this change we’re extending the ability of smart contracts to interact with external decentralized data. This is accomplished by creating a seperate network of authorized DSP nodes that manage decentralized data storage. DSPs provide data storage using regulatory compliant data storage, and securing access to the data by deploying a data handling contract on the smart contract network. These DSP-deployed data storage contracts contain relevant meta-data and permissions as well as methods for accessing the data and meta-data.
+The previous modifications were aimed at securing smart contracts state and execution. With this change we’re extending the ability of smart contracts to interact with external decentralized data. This is accomplished by creating a separate network of authorized DSP nodes that manage decentralized data storage. DSPs provide data storage using regulatory compliant data storage, and securing access to the data by deploying a data handling contract on the smart contract network. These DSP-deployed data storage contracts contain relevant meta-data and permissions as well as methods for accessing the data and meta-data.
 
   
 
 Smart contracts with permission to interact with the data-storage contract will be able to access the meta-data and reason about the properties of the data including: type, availability, and access.
 
   
-
-Data access is provided through interacting with the data-storage contract. The system is designed such that different types of data may have their own data-storage contract that provide additional interface options.  
-  
+Data access is provided through interacting with the data-storage contract. The system is designed such that different types of data may have their own data-storage contract that provide additional interface options.
 Nectar Roadmap
 
   
