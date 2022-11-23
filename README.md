@@ -294,54 +294,6 @@ While we are able to stand on the shoulders of giants (🙏🙌 Open Source Comm
 
   
 
-Q3 2021
-
-Nectar Protocol launches and incorporates
-
-Expand engineering team
-
-Development of Nectar rollup begins
-
-  
-
-Q4 2021
-
-Development of decentralised storage contract
-
-Begin design and implementation: Decentralized Data Storage (DDS)
-
-  
-
-Q1 and Q2 2022  
-Testnet deployment of Rollup
-
-Convert Data Storage Contract (DSC) to zero knowledge circuit  
-Implement zkSync on testnet, deploy DSC with Alpha Nectar DDS Network  
-  
-
-Q3 2022
-
-Develop pre-execution permissioning for smart contract on zkPorter  
-Development of Nectar Governance API / Risk-sharing smart contract for approved network nodes
-
-Alpha Nectar SDK released with javascript API
-
-  
-
-Q4 2022
-
-Integrate Nectar Governance with ZK Rollup, and DDS
-
-Audit codebase in preparation for mainnet deploy
-
-  
-
-2023
-
-Mainnet Launch of Nectar
-
-  
-
 Concluding Remarks  
 With Nectar we aim to enable Ethereum for data-regulated industries, starting with HIPAA and protected health information. To do this we’re proposing the use of authorized nodes, private contract execution, and a privacy-preserving zero-knowledge validity proofs.  
   
